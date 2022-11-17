@@ -13,6 +13,8 @@ import AboutIconLink from './components/AboutIconLink'
 import AboutPage from './pages/AboutPage' 
 import Post from './components/Post'
 
+import {FeedbackProvider} from './context/FeedbackContext'
+
 function App(){
  const [feedback,setFeedbak]= useState(FeedbackData)
 
@@ -33,6 +35,7 @@ function App(){
  }
  
     return (
+        <FeedbackProvider>
         <Router>
 {/* Suppose we want to make header name dynamic 
 in such case we will use prop. Note: We can name prop anything we want */}
@@ -60,6 +63,7 @@ in such case we will use prop. Note: We can name prop anything we want */}
         <Route path='/post/*' element={<Post />} />
 
     </Routes>
+   
 
     {/* <Card>
         <NavLink to='/' activeClassName='active'>
@@ -74,6 +78,7 @@ in such case we will use prop. Note: We can name prop anything we want */}
 
         </div>
         </Router>
+        </FeedbackProvider>
     )
 }
 
