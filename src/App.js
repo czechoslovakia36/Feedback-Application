@@ -46,9 +46,8 @@ in such case we will use prop. Note: We can name prop anything we want */}
             <Route exact path='/' element={
                 <>
                  <FeedbackForm handleAdd={addFeedback} />
-            <FeedbackStats feedback={feedback} />
-           <FeedbackList feedback={feedback}
-           handleDelete={deleteFeedback} />
+            <FeedbackStats />
+           <FeedbackList handleDelete={deleteFeedback} />
             {/* <Card>Hello</Card> */}
                 </>
             }>
